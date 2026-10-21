@@ -1,0 +1,290 @@
+.projects-section {
+  position: relative;
+  background-color: #08080a;
+  color: #ffffff;
+  padding: 6rem 1rem 2rem 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.projects-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER STYLING
+   ========================================================= */
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.projects-subtag {
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.projects-main-title {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 1.25rem 0;
+}
+
+.projects-description {
+  font-size: 1rem;
+  color: #9ca3af;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0;
+}
+
+.btn-see-all {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-see-all:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HORIZONTAL SCROLLABLE TRACK (LAPTOP & MOBILE)
+   ========================================================= */
+.projects-track-wrapper {
+  display: flex;
+  gap: 1.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1.5rem;
+  scroll-behavior: smooth;
+  /* Hide scrollbar across all browsers */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projects-track-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  position: relative;
+  background-color: #111115;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  
+  /* Laptop Width: Fits ~2.3 cards so user sees horizontal scroll preview */
+  width: calc(42% - 1rem); 
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.card-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 8, 10, 0.95) 0%,
+    rgba(8, 8, 10, 0.5) 40%,
+    transparent 100%
+  );
+}
+
+/* Card Information Box */
+.card-info-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-tags {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #e53e3e;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.card-view-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #d1d5db;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.project-card:hover .card-view-btn {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   BOTTOM PROGRESS BAR & CONTROLS
+   ========================================================= */
+.projects-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  gap: 2rem;
+}.progress-indicator-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.counter-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.counter-text .active-num {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.progress-track {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #e53e3e;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.arrow-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:hover {
+  border-color: #e53e3e;
+  background-color: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+}
+
+/* =========================================================
+   MEDIA QUERIES
+   ========================================================= */
+@media (min-width: 1024px) {
+  .projects-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .projects-section {
+  padding: 6rem 4rem 2rem 4rem;
+}
+}
+
+@media (max-width: 1023px) {
+  .desktop-only-br {
+    display: none;
+  }
+
+  /* Mobile Width: Takes ~82% screen width so preview of next card is visible */
+  .project-card {
+    width: 82vw;
+    border-radius: 1.75rem;
+  }
+
+  .card-image-wrapper {
+    height: 400px;
+  }
+}

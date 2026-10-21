@@ -1,0 +1,90 @@
+.numbers-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+}
+
+.numbers-container {
+  /* max-width: 1300px; */
+  margin: 0 auto;
+}
+
+.numbers-subtag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.numbers-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #e53e3e;
+}
+
+/* 4 Column Layout */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.number-stat-col {
+  padding: 1rem 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.35rem 0;
+}
+
+.stat-subtitle {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .numbers-section {
+    padding: 5rem 4rem;
+  }
+  .numbers-grid {
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: none;
+  }
+
+  .number-stat-col {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: none;
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  .number-stat-col:first-child {
+    padding-left: 0;
+  }
+
+  .number-stat-col:last-child {
+    border-right: none;
+  }
+}

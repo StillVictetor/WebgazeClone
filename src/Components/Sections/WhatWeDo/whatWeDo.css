@@ -1,0 +1,125 @@
+.what-we-do-section {
+  background-color: #ffffff;
+  color: #111111;
+  padding: 6rem 1rem;
+  box-sizing: border-box;
+}
+
+.wwd-container {
+  /* max-width: 1300px; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+.wwd-subtag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.wwd-red-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #e53e3e;
+}
+
+.wwd-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #111111;
+  margin: 0 0 1.5rem 0;
+}
+
+.wwd-desc {
+  font-size: 1rem;
+  color: #1d1d1d;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 480px;
+}
+
+.wwd-right-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.wwd-list-item {
+  /* display: grid;
+  grid-template-columns: 40px 1fr 30px; */
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+  align-items: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.wwd-list-item:last-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.item-num {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #e53e3e;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.item-text {
+  font-size: 0.8rem;
+  color: #1d1d1d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.item-arrow {
+  display: none;
+  font-size: 1.25rem;
+  color: #9ca3af;
+  text-align: right;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.wwd-list-item:hover .item-arrow {
+  transform: translateX(4px);
+  color: #111111;
+}
+
+@media (min-width: 1024px) {
+    .what-we-do-section {
+  padding: 6rem 4rem;
+}
+  .wwd-list-item {
+    display: grid;
+    grid-template-columns: 40px 1fr 30px;
+  }
+
+  .item-arrow {
+    display: block;
+  }
+  .what-we-do-section {
+    padding: 6rem 4rem;
+  }
+  .wwd-container {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}

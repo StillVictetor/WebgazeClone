@@ -1,0 +1,185 @@
+.products-section {
+  position: relative;
+  background-color: #f7f7f5;
+  color: #111111;
+  /*  */
+  box-sizing: border-box;
+}
+
+.products-container {
+  margin: 0 auto;
+  padding: 5rem 1rem 7rem 1rem;
+}
+
+/* =========================================================
+   HEADER & FILTER TABS BAR
+   ========================================================= */
+.products-header-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid #e5e5e0;
+  padding-bottom: 1.5rem;
+}
+
+.products-counter-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.dot-separator {
+  font-size: 1.25rem;
+  color: #6b7280;
+  line-height: 1;
+}
+
+.projects-count-real {
+  color: #6b7280;
+}
+
+/* Tabs Group */
+.products-tabs-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  background-color: #eeeee9;
+  padding: 0.35rem;
+  border-radius: 9999px;
+}
+
+.tab-btn {
+  background-color: transparent;
+  border: none;
+  color: #4b5563;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.tab-btn:hover {
+  color: #111111;
+}
+
+.tab-btn.active {
+  background-color: #e53e3e;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+/* =========================================================
+   PROJECTS GRID & CARDS
+   ========================================================= */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.product-grid-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: #111111;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-grid-card:hover {
+  transform: translateY(-4px);
+  border-color: #d1d5db;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-box {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-grid-card:hover .product-image-box img {
+  transform: scale(1.03);
+}
+
+.product-info-box {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.product-tags {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.no-projects-found {
+  text-align: center;
+  padding: 4rem 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-container {
+    margin: 0 auto;
+    padding: 5rem 4rem 7rem 4rem;
+  }
+  .products-header-bar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-image-box {
+    height: 310px;
+  }
+}

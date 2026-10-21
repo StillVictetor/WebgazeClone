@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* --- Hero Container --- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #08080a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 3rem;
+  overflow: hidden;
+  /* box-sizing: border-box; */
+}
+
+/* --- Left Graphic Background Arcs & Grid --- */
+.hero-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.arc-shape {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.arc-1 {
+  width: 250px;
+  height: 250px;
+  border-color: rgba(229, 62, 62, 0.2);
+  background: radial-gradient(
+    circle,
+    rgba(229, 62, 62, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.arc-2 {
+  width: 420px;
+  height: 420px;
+}
+
+.arc-3 {
+  width: 600px;
+  height: 600px;
+}
+
+/* --- Content Layout --- */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  width: 100%;
+  /* right: -90px; */
+}
+
+/* Entrance Slide-Up Animation */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Typography --- */
+.hero-headline {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02rem;
+  color: #ffffff;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.typewriter-container {
+  font-size: clamp(1.5rem, 3.3vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.typewriter-static {
+  color: #d1d5db;
+}
+
+.typewriter-dynamic {
+  color: rgb(219, 27, 27); /* Signature Red Color */
+  position: relative;
+}
+
+/* Blinking Cursor */
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: rgb(219, 27, 27) e;
+  animation: blink 0.7s infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-subtext {
+  font-size: clamp(1rem, 1.4vw, 1.7rem);
+  color: #9ca3af;
+  max-width: 580px;
+  margin-left: auto;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+/* --- CTA Buttons --- */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: auto 0 0 auto;
+}
+
+.btn-primary {
+  background-color: #db1b1b;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 10px 25px -5px rgba(229, 62, 62, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #b90c0c;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    ase;
+}
+
+.btn-secondary:hover {
+  color: rgb(219, 27, 27);
+  border-color: rgb(219, 27, 27);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 1024px) {
+  .hero-section {
+    justify-content: center;
+    padding: 7rem 2rem 3rem 2rem;
+  }
+
+  .hero-grid-bg {
+    width: 100%;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 7rem 1rem;
+    min-height: 70vh;
+  }
+
+  .hero-headline {
+  text-align: left;
+}
+
+  .typewriter-container {
+  text-align: left;
+}
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

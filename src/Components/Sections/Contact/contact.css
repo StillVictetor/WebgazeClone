@@ -1,0 +1,288 @@
+.contact-section {
+  background-color: #f8f9fa;
+  color: #111111;
+  /*  */
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 6rem 1rem;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* =========================================================
+   LEFT COLUMN STYLING
+   ========================================================= */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 2.8vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #111111;
+  margin: 0 0 1.25rem 0;
+}
+
+.highlight-red {
+  color: #e53e3e;
+}
+
+.contact-subtitle {
+  font-size: .95rem;
+  color: #1d1d1d;
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+  max-width: 480px;
+}
+
+/* Info Cards */
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.1rem 1.5rem;
+  text-decoration: none;
+  color: #111111;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.info-card:hover {
+  border-color: #e53e3e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.info-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.info-detail {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* Red Proposal Banner */
+.proposal-cta-box {
+  background-color: #e53e3e;
+  color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 15px 30px -10px rgba(229, 62, 62, 0.4);
+}
+
+.proposal-box-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.proposal-box-text {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn-proposal-pill {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.btn-proposal-pill:hover {
+  background-color: #f3f4f6;
+}
+
+/* =========================================================
+   RIGHT COLUMN (FORM CARD) STYLING
+   ========================================================= */
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.75rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem 0;
+}
+
+.form-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #374151;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.85rem;
+  /* padding: 0.9rem 1.25rem; */
+  padding: 1rem 1.2rem 1rem 3rem;
+  font-size: 0.95rem;
+  color: #111111;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+}
+
+.btn-send-message {
+  background-color: #e53e3e;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 1.1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 10px 20px -5px rgba(229, 62, 62, 0.4);
+}
+
+.btn-send-message:hover {
+  background-color: #c53030;
+  transform: translateY(-2px);
+}
+
+.form-footer-note {
+  font-size: 0.78rem;
+  color: #6b7280;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================================= */
+@media (min-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 4rem;
+    padding: 10rem 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* .contact-section {
+    padding: 4rem 1.25rem;
+  } */
+
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,232 @@
+.testimonials-faq-section {
+  position: relative;
+  background-color: #ffffff;
+  color: #111111;
+  padding: 7rem 4rem;
+  box-sizing: border-box;
+}
+
+.tf-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+/* Shared Header Styling */
+.tf-section-header {
+  margin-bottom: 3rem;
+}
+
+.tf-subtag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tf-red-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #e53e3e;
+}
+
+.tf-main-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #111111;
+  margin: 0 0 1rem 0;
+}
+
+.tf-description {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* =========================================================
+   TESTIMONIALS SIDE
+   ========================================================= */
+.testimonial-card {
+  background-color: #0b0b0f;
+  color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 360px;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.testimonial-logo-badge {
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  align-self: flex-start;
+}
+
+.testimonial-quote {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  color: #f3f4f6;
+  margin: 0;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.testimonial-author-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+}
+
+.author-role {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Testimonial Slider Pagination Bars */
+.testimonial-pagination {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 320px;
+}
+
+.pagination-bar {
+  flex: 1;
+  height: 3px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+.pagination-bar.active {
+  background-color: #111111;
+}
+
+/* =========================================================
+   FAQ ACCORDION SIDE
+   ========================================================= */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111111;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq-question-btn:hover {
+  color: #e53e3e;
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  padding-bottom: 1.5rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-cta-wrapper {
+  margin-top: 2.5rem;
+}
+
+.btn-email-us {
+  display: inline-block;
+  background-color: #e53e3e;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 1rem 2.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  box-shadow: 0 10px 20px -5px rgba(229, 62, 62, 0.4);
+}
+
+.btn-email-us:hover {
+  background-color: #c53030;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 1023px) {
+  .testimonials-faq-section {
+    padding: 7rem 4rem;
+  }
+  .tf-container {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-faq-section {
+    padding: 4rem 1rem;
+  }
+  .testimonial-card {
+    padding: 2rem;
+    min-height: auto;
+  }
+}

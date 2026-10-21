@@ -1,0 +1,248 @@
+.split-skills-section {
+  position: relative;
+  background-color: #ffffff;
+  color: #111111;
+  padding: 1rem 1rem 3rem 1rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.split-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* --- LEFT SIDE DEFAULT (Mobile) --- */
+.split-left {
+  width: 100%;
+}
+
+.sticky-text-content {
+  width: 100%;
+}
+
+.skills-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.skills-subtitle {
+  font-size: 1.1rem;
+  color: #111111;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+/* --- RIGHT SIDE: Cards Stack --- */
+.split-right {
+  width: 100%;
+}
+
+.cards-stack-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* Crucial: adds extra scroll space at the bottom so cards can unpin smoothly */
+  padding-bottom: 6rem;
+}
+
+/* Individual Stackable Cards */
+.sticky-card {
+  position: sticky;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 25px -10px -12px rgba(0, 0, 0, 0.8);
+  border: 1px solid #1111112f;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e53e3e;
+}
+
+.card-tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  color: #a0aec0;
+}
+
+.card-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.card-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a0aec0;
+}
+
+/* --- LAPTOP / DESKTOP VIEW BREAKPOINT (1024px and above) --- */
+@media (min-width: 1024px) {
+  .split-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6rem;
+  }
+
+  /* Make the ENTIRE left column sticky so it stays locked in view while scrolling through the cards */
+  .split-left {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+  }
+
+  .split-right {
+    flex: 1.2;
+  }
+}
+
+/*  */
+
+.trusted-section {
+  background-color: #ffffff;
+  color: #111111;
+  padding: 1rem;
+  margin-bottom: 10rem;
+  border-bottom: 1px solid #1111112f;
+  border-radius: 2rem 2rem 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trusted-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Mobile first: text on top, logos below */
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Title Styling */
+.trusted-title-box h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: #4a5568;
+  margin: 0;
+  text-align: center;
+}
+
+/* Infinite Ticker Layout */
+.brands-ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.brands-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scrollTicker 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.brands-ticker-wrapper:hover .brands-track {
+  animation-play-state: paused;
+}
+
+.brand-slide {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.brand-item {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.brand-item:hover {
+  opacity: 1;
+}
+
+/* Infinite Scroll Keyframes */
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- LAPTOP / DESKTOP VIEW (Side-by-Side) --- */
+@media (min-width: 1024px) {
+  .split-skills-section {
+    position: relative;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 1rem 2rem 3rem 2rem;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+  }
+  .trusted-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .trusted-title-box h3 {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .trusted-title-box {
+    flex-shrink: 0;
+  }
+}

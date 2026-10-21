@@ -1,0 +1,232 @@
+.how-we-work-section {
+  position: relative;
+  background-color: #1d1d1d;
+  color: #ffffff;
+  padding: 4rem 4rem;
+  overflow: hidden;
+}
+
+.hww-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.hww-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 8rem;
+}
+
+.hww-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #e53e3e;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hww-line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #e53e3e;
+}
+
+.hww-main-title {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hww-description {
+  font-size: .95rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 0;
+}
+
+.hww-process-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Typography & Content inside Steps */
+.hww-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 0.4rem 0;
+}
+
+.hww-card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  color: #e53e3e;
+  margin: 0 0 1.25rem 0;
+}
+
+.hww-card-text {
+  font-size: 0.90rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 1.75rem 0;
+}
+
+.hww-pills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hww-pill {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #d1d5db;
+  background-color: transparent;
+}
+
+/* =========================================================
+   1. LAPTOP / DESKTOP VIEW (Horizontal 4-Column Layout)
+   ========================================================= */
+@media (min-width: 1024px) {
+  .hww-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .hww-vertical-line-mobile,
+  .hww-number-badge-mobile {
+    display: none; /* Hide mobile-specific timeline elements */
+  }
+
+  .hww-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .hww-step-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hww-desktop-line-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hww-horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .hww-number-badge-desktop {
+    width: 38px;
+    height: 38px;
+    background-color: #111115;
+    border: 1px solid #e53e3e;
+    color: #e53e3e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: -19px; /* Centers the badge over the horizontal line */
+  }
+}
+
+/* =========================================================
+   2. MOBILE PHONE VIEW (Vertical Red Line + Slide-In Cards)
+   ========================================================= */
+@media (max-width: 1023px) {
+  .how-we-work-section {
+    padding: 4rem 1rem;
+  }
+  .hww-desktop-line-container {
+    display: none; /* Hide desktop horizontal line elements */
+  }
+
+  /* Continuous Red Vertical Line on Left */
+  .hww-vertical-line-mobile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background-color: #e53e3e;
+  }
+
+  .hww-steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hww-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    /* Slide in from right animation */
+    animation: slideInFromRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Red Badge directly over the vertical line */
+  .hww-number-badge-mobile {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background-color: #e53e3e;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(229, 62, 62, 0.4);
+  }
+  .hww-content-body {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile Slide In Animation */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

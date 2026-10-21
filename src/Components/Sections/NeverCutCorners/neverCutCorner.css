@@ -1,0 +1,104 @@
+.corners-section {
+  background-color: #08080a;
+  color: #ffffff;
+  padding: 6rem 1rem;
+  box-sizing: border-box;
+}
+
+.corners-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.corners-subtag {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e53e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.corners-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #e53e3e;
+}
+
+.corners-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 3rem 0;
+}
+
+/* Quadrant Outline Container */
+.corners-box-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #ffffff;
+}
+
+.corner-card {
+  padding: 1.5rem;
+}
+
+.corner-card:last-child {
+  border-bottom: none;
+}
+
+.corner-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.corner-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e53e3e;
+}
+
+.corner-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.corner-card-text {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .corners-section {
+    padding: 6rem 4rem;
+  }
+  .corners-box-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .corner-card:nth-child(1) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .corner-card:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .corner-card:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: none;
+  } */
+}
